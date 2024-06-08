@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+    </style>
+  </head>
+  <body class="relative h-auto overflow-x-hidden">
+    <nav class="container-padding py-6 w-full relative z-50">
+      <div class="flexBetween pt-2">
+        <div class="flexBetween text-white">
+          <a href="/">
+            <h3 class="font-extrabold leading-none text-2xl mr-12">
+              Bukit<br />Scooter
+            </h3>
+          </a>
+          <ul class="hidden lg:flexCenter gap-14 font-light">
+            <li class="hover:font-medium text-lg"><a href="/">Beranda</a></li>
+            <li class="hover:font-medium text-lg">
+              <a href="#destinasi">Destinasi</a>
+            </li>
+            <li class="hover:font-medium text-lg">
+              <a href="#fasilitas">Fasilitas</a>
+            </li>
+            <li class="hover:font-medium text-lg">
+              <a href="#review">Review</a>
+            </li>
+          </ul>
+        </div>
+        <div class="max-lg:hidden">
+          <button
+            class="border-2 border-white text-white rounded-full font-medium py-2 px-5 hover:bg-white hover:text-black transisi"
+          >
+            <a href="https://wa.me/622345678" target="_blank">
+              Kontak Kami
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </button>
+        </div>
+        <div class="lg:hidden inline-block">
+          <button id="menu" class="text-white">
+            <i class="fa-solid fa-bars text-3xl"></i>
+          </button>
+        </div>
+        <nav
+          class="fixed top-0 right-[-100%] w-5/6 h-screen bg-white p-10 hidden z-50"
+          id="mobile-menu"
+        >
+          <div class="flexCenter flex-col w-full h-full pt-5">
+            <div class="flexBetween w-full">
+              <a href="/" class="max-w-fit">
+                <h3 class="font-extrabold leading-none text-2xl">
+                  Bukit<br />Scooter
+                </h3>
+              </a>
+              <button id="menu-close">
+                <i class="fa-solid fa-x text-2xl"></i>
+              </button>
+            </div>
+            <ul class="min-h-full flex items-center justify-around flex-col">
+              <li class="hover:font-medium text-lg"><a href="/">Beranda</a></li>
+              <li class="hover:font-medium text-lg">
+                <a href="#destinasi">Destinasi</a>
+              </li>
+              <li class="hover:font-medium text-lg">
+                <a href="#fasilitas">Fasilitas</a>
+              </li>
+              <li class="hover:font-medium text-lg">
+                <a href="#review">Review</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
+    <!-- hero -->
+    <section class="max-container w-full h-[600px]">
+      <div class="absolute top-0 w-full">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-8LjgqbuTgHg-VYdAHfzHADyPNMnqY4urOADK5dT5s95L5yVIKoqOkHHt_TI8ctXGw9b73PgWqiWMqTfATP6otPfVVQHrve8xjiWToubA__R27tXT2ixgWs4mMkv_druF_nYWITz-rZCFpOw5Z-seyEF0m_AiuFgARcd0OOlbrcC_cBihMe4QIrWLDMxg/s320/bukit.jpg"
+          alt="bukit scooter"
+          class="min-w-full h-[600px] brightness-[.7] object-cover object-center"
+        />
+      </div>
+      <div class="absolute z-30 top-56 left-10 lg:left-14">
+        <h2
+          class="font-bold text-white text-6xl lg:leading-[1.3] max-[410px]:text-5xl"
+        >
+          Wisata Dieng Wonosobo<br />
+          Bukit Scooter
+        </h2>
+      </div>
+    </section>
+    <!-- Deskripsi -->
+    <section class="container-padding -mt-6 lg:mt-0">
+      <div class="flex gap-10 lg:gap-14 flex-col-reverse lg:flex-row">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnkLfVNYrdYSR-uJF38VMdNotQEATsyOky-8qg_LuDxKDFs8azSn809gVk5JUK6RadgtrCT81VRBZepVWvXXOtac6phJRjgR4eD-X7v--kGkrmyvmsrDtAUsSkguV9NQUf6ssHsP1INfJpNqGCJDqQYuy5EiPR-Od88qSdVgofam0lYVV8dVYVlVFdYA/s553/Bukit-Scooter-Dieng.png"
+          alt="card"
+          class="rounded-[32px] min-h-[350px]: max-h-[430px] object-cover object-center lg:min-w-[600px] brightness-[.9]"
+        />
+        <div class="">
+          <h2 class="font-bold text-5xl mt-6">Bukit Scooter</h2>
+          <p
+            class="mt-7 text-gray-500 lg:text-left leading-relaxed font-medium text-lg text-justify"
+          >
+            Bukit ini menjadi alternatif bagi pengunjung untuk melihat sunrise
+            dengan panorama desa dan pegunungan. Adapun jam buka untuk wisata
+            biasa atau non-camping adalah mulai pukul 05.30 WIB sampai setelah
+            maghrib. Jika malam minggu, tempat ini buka 24 jam. Bagi pengunjung
+            yang melakukan camping, harga tiketnya adalah Rp 10.000 per orang
+            dan Rp 30.000 untuk sewa lahan untuk mendirikan tenda. Tarif parkir
+            motor menginap adalah Rp 5.000 dan mobil menginap Rp 10.000.
+          </p>
+          <button
+            class="border-2 border-black px-6 py-2 rounded-full mt-6 lg:mt-8 font-medium hover-black"
+          >
+            <a
+              href="https://www.google.com/travel/hotels/s/NEonK8NC1zEKqij56"
+              target="_blank"
+            >
+              Lokasi
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Dokumentasi -->
+    <section id="destinasi" class="max-container mt-28">
+      <div class="flexBetween flex-wrap padding-container">
+        <div class="">
+          <h2 class="font-bold text-5xl">Dokumentasi</h2>
+          <p class="mt-4 text-gray-500 font-medium text-lg">
+            Berikut ini beberapa dukumentasi yang kami ambil dari
+            <br class="max-lg:hidden" />
+            wisatawan yang berkunjung bukit scooter
+          </p>
+        </div>
+        <button
+          class="border-2 rounded-full font-medium text-lg border-black px-4 py-2 hover-black max-lg:mt-5"
+        >
+          Lihat Semua
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+      <div class="mt-14 relative">
+        <swiper-container
+          class="mySwiper relative z-10"
+          pagination="true"
+          pagination-dynamic-bullets="true"
+          loop="true"
+          pagination-clickable="true"
+          space-between="30"
+          centered-slides="true"
+          effect="coverflow"
+          grab-cursor="true"
+          coverflow-effect-rotate="0"
+          coverflow-effect-stretch="0"
+          coverflow-effect-depth="70"
+          coverflow-effect-modifier="1"
+          coverflow-effect-slide-shadows="false"
+          breakpoints='{"0": {"slidesPerView": 1, "spaceBetween": 0}, "350": {"slidesPerView": 1.1, "spaceBetween": 20}, "650": {"slidesPerView": 1.5, "spaceBetween": 30}, "802": {"slidesPerView": 1.5, "spaceBetween": 50}, "990": { "slidesPerView": 1.5 }, "1024": {"slidesPerView": 2}}'
+        >
+          <swiper-slide
+            ><img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-WGMCLmMyQq6aYiyyHHD7uuodzLbRVyHSraMmLHnuiJkgSr1vFB4I4Oo64zafjpy4HX5aTueDC-hUM2HlDzW58PvZCrtio6ncOm-etwOvrApvyHQy4tkI0zSdLnDK2t5j1UVgFjQ7M6THwPX3CNxAhq2pNk6MrFHtdF2eApRS7-jM_dt9bWv09yV1xFT6/s320/bukit.jpg"
+              alt="bukit"
+              loading="lazy"
+              class="rounded-3xl h-[370px] object-cover object-center"
+          /></swiper-slide>
+          <swiper-slide
+            ><img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjB0GodgYCmCIXC_fHFNmmXMDD_kfhuENmynMBrX7dBQmYJyHIrNEaf6abJpjm5hXDTZFgEj7yIeoyFe3tY932AE7eRXlBgKtIgQIRzDSGeiX6oOniWfQWVfuGJWXM7OPJS7RvPs-4VKFpbVxbTTYhWCbWYvqY5YJXlxC_eZlYAEXl6ajORRnM-daqNDfHP/s320/9a1a4676-6d8c-4c67-8d6a-43c232d7522a.jpg"
+              alt="bukit"
+              loading="lazy"
+              class="rounded-3xl h-[370px] object-cover object-center"
+          /></swiper-slide>
+          <swiper-slide
+            ><img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia9HHPqvOEtL5VJkmGNNpxqxwrPFJkCZs7TrtaQq6f5GZmEh-InA9l_ocyv91E1OHSaRE5thGcmyXvuoL3YCv3WY2D6hSpqRr2X6BP9ODNj2VVimUow4F2VnFmgvUVVEnqAKd0CbamGbgVp7xQE9YROn4L2tNMWYtW06pwJH_jDDaAEtuNyc_EDCHLVyVI/s724/f651bf70-8809-412f-9491-9195c1bb2a8a%20(1).jpg"
+              alt="bukit"
+              loading="lazy"
+              class="rounded-3xl h-[370px] object-cover object-center"
+          /></swiper-slide>
+          <swiper-slide
+            ><img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiX0ABhuxLZ4Ar5ea5QEq3ODK81M9WLtnF8S2B4D3FC4iFPaXNfUtJJuXj_9vRuHiLEjVMHQZgh-L8cTRw33h3BSialABp0MbqanpwDyT9WHYZ1tSeNEVTT7roSC826wnRjDSxSXkKtIgvHmNzwAfRQGlfHC6KKDbYJRD4bJBnNxTiEH62tor_jY2yyxPMi/s320/7ff84946-6554-4ff3-8326-04b2467348e4.jpg"
+              alt="bukit"
+              loading="lazy"
+              class="rounded-3xl h-[370px] object-cover object-center"
+          /></swiper-slide>
+          <swiper-slide
+            ><img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbh5KiG9gsWk8zMiCwByKl3pxPIo3EPviE1EHeWGhqdeih8a3497_ih1gK4wqhe_0SetqLDh-pX0JxaXStt2Eb94AT38dQprVjaqHMBKxfI2iGk6m8OVfg8Jv2fctVM_rwVP3FjjrB3pg9vxnIIiWAbxjE8ffuOqkWzlfGfXyebR3C97HbMQH1bAUYBZNs/s320/81d8160a-30a9-4b2b-b166-ff64ce1779fe.jpg"
+              alt="bukit"
+              loading="lazy"
+              class="rounded-3xl h-[370px] object-cover object-center"
+          /></swiper-slide>
+        </swiper-container>
+        <!-- navigasi -->
+        <div
+          class="flexCenter gap-56 text-center w-full absolute bottom-0 z-20"
+        >
+          <button class="text-2xl text-gray-700 swiper-button-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="text-2xl text-gray-700 swiper-button-next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      id="fasilitas"
+      class="mt-20 container-padding bg-gray-100 py-20 max-lg:pt-10"
+    >
+      <div class="flexBetween gap-8 max-lg:flex-col">
+        <div class="">
+          <h2 class="font-bold text-5xl leading-tight capitalize">
+            Fasilitas yang anda dapatkan
+          </h2>
+          <p class="mt-8 font-medium text-gray-500 text-lg">
+            Jika ingin berkunjung ke Bukit Scooter Dieng, Anda tidak perlu
+            mengkhawatirkan fasilitasnya. Bukit Scooter menyediakan beberapa
+            fasilitas yang dapat mendukung kenyamanan dan pengalaman berwisata
+            Anda.
+          </p>
+        </div>
+        <div class="flex gap-8 max-lg:flex-col max-lg:mt-4">
+          <!-- Fasilitas umum -->
+          <div
+            class="rounded-3xl flex-1 w-[340px] min-h-[480px] border border-gray-200 shadow-lg px-8 py-10 bg-white"
+          >
+            <h3 class="capitalize text-2xl font-bold">
+              Fasilitas bukit scooter
+            </h3>
+            <p class="font-medium text-lg leading-tight mt-4 text-gray-500">
+              Fasilitas umum yang dapat anda nikmati
+            </p>
+            <ul class="mt-10">
+              <li class="text-lg">
+                <i
+                  class="fa-solid fa-circle-check mr-2 text-blue-500 text-xl"
+                ></i>
+                Area Camping
+              </li>
+              <li class="text-lg mt-2">
+                <i
+                  class="fa-solid fa-circle-check mr-2 text-blue-500 text-xl"
+                ></i>
+                Parkir motor dan Mobil
+              </li>
+              <li class="text-lg mt-2">
+                <i
+                  class="fa-solid fa-circle-check mr-2 text-blue-500 text-xl"
+                ></i>
+                Kamar mandi umum
+              </li>
+              <li class="text-lg mt-2">
+                <i
+                  class="fa-solid fa-circle-check mr-2 text-blue-500 text-xl"
+                ></i>
+                Mushola
+              </li>
+            </ul>
+          </div>
+          <!-- Fasilitas yang disewakan -->
+          <div
+            class="rounded-3xl flex-1 w-[340px] min-h-[480px] border-2 border-blue-500 px-8 py-10 bg-white shadow-lg"
+          >
+            <h3 class="capitalize text-2xl font-bold">Persewaan</h3>
+            <p class="font-medium text-lg leading-tight mt-4 text-gray-500">
+              Persewaan yang ada di Bukit Scooters
+            </p>
+            <ul class="mt-10">
+              <li class="text-lg flex items-center leading-tight">
+                <i
+                  class="fa-solid fa-circle-check mr-3 text-blue-500 text-xl -mt-4"
+                ></i>
+                <p>Persewaan tenda mulai dari Rp 50.000</p>
+              </li>
+              <li class="text-lg flex items-center leading-tight mt-2">
+                <i
+                  class="fa-solid fa-circle-check mr-3 text-blue-500 text-xl -mt-10"
+                ></i>
+                <p>
+                  Persewaan alat camping seperti sleeping bag, matras, kompor,
+                  dan lainnya
+                </p>
+              </li>
+              <li class="text-lg flex items-center leading-tight mt-2">
+                <i
+                  class="fa-solid fa-circle-check mr-3 text-blue-500 text-xl -mt-4"
+                ></i>
+                <p>Penginapan mulai dari 1,2 Juta</p>
+              </li>
+            </ul>
+            <button
+              class="text-lg font-medium w-full py-2 rounded-full border-2 border-black mt-14 hover-black"
+            >
+              <a href="https://wa.me/622345678" target="_blank">
+                Booking Sekarang
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Review -->
+    <section id="review" class="mt-24 max-container">
+      <div class="">
+        <h2 class="font-bold text-5xl leading-[1.1] capitalize text-center">
+          Review wisatawan <br />
+          bukit scooter
+        </h2>
+        <!-- review orang -->
+        <div class="mt-16 overflow-hidden group">
+          <div
+            class="flexBetween space-x-8 animate-loop-scroll lg:animate-loop-scroll-lg"
+          >
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Tempat parkir cukup luas, biaya masuk 10k. Diatas penuh ground
+                tp untuk sekedar main tanpa nge-camp bisa kok.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/sPDqJPL.jpeg"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Yanu Trinugraha</h6>
+                  <p>Februari, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Pas buat yg mau ngecamp tapi ga mau capek, soalnya bisa naik
+                ojek. Kalau buat lansia kasian dari parkiran naik keatasnya.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/uoodYoz.png"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Mpok mimin</h6>
+                  <p>Januari, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Kita harus naik tangga dulu, sampe atas pemandangannya cantik
+                banget. Bisa liat sunrise juga.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/t4Xtin1.png"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Vivi Aulia</h6>
+                  <p>Mei, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Wisata yang bagus buat ngecamp, sejuk dingin mata benar-benar
+                dimanjakan dengan hijaunya perkebunan.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/L2GxmUW.jpeg"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">
+                    Festi Istiqlaily rizky
+                  </h6>
+                  <p>Januari, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Cocok buat hiling, mencari udara dingin.. Buat yang bawa mobil
+                hari-hati jalan menuju bukit belum diaspal
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/gDzlnzG.png"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Mas Cogan</h6>
+                  <p>Mei, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flexBetween space-x-8 animate-loop-scroll-reverse lg:animate-loop-scroll-reverse-lg mt-8"
+          >
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Akses jalan sempit dan menanjak, tiket murah hanya 10k .Terdapat
+                tempat camping dan spot foto.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/Z6bSfAz.jpeg"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Zamzamy anim</h6>
+                  <p>Mei, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Dateng pas sunset, viewnya cakepp. Ternyata bisa nge-camp
+                disini. Bisa liat sunrise dan sunset.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/VBejISd_d.webp?maxwidth=760&fidelity=grand"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Aldi shofi</h6>
+                  <p>Maret, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Tempat yang nyaman dengan pemandangan yang luar biasa, cuma ada
+                satu villa tapi banyak tempat campingnya.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/kymBurE_d.webp?maxwidth=760&fidelity=grand"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Romman in</h6>
+                  <p>Mei, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Gaperlu effort tracking udah dapet view sunrise yang cantik
+                banget, MasyaAllah dateng pas tgl 25 des rame bgt.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/opUfA0f_d.webp?maxwidth=760&fidelity=grand"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Afri Falah</h6>
+                  <p>Februari, 2024</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-300 rounded-xl p-5 h-48 min-w-[480px] flex flex-col justify-between"
+            >
+              <h3 class="text-xl font-medium">
+                Tempatnya bagus, penjual tiketnya juga ramah HTM 10-20K, suhunya
+                dingin pastikan menggunakan pakaian yang cukup tebal.
+              </h3>
+              <div class="flex items-center gap-4">
+                <img
+                  src="https://i.imgur.com/c9UsqXY.png"
+                  alt="profil"
+                  loading="lazy"
+                  class="w-12 h-12 object-cover object-center rounded-full"
+                />
+                <div class="">
+                  <h6 class="font-medium text-lg -mb-1">Zaelani nugraha</h6>
+                  <p>April, 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="max-container mt-[400px] flexCenter flex-col relative">
+      <div
+        class="w-11/12 bg-blue-500 p-14 absolute -top-[300px] lg:-top-48 max-[500px]:p-8"
+      >
+        <h2 class="text-white font-bold text-5xl leading-[1.1] capitalize">
+          Yakin tidak mau mengunjungi <br class="max-lg:hidden" />
+          bukit scooter?
+        </h2>
+        <div
+          class="flex max-lg:flex-col items-start lg:items-center lg:justify-between mt-6"
+        >
+          <p class="capitalize text-2xl text-white">
+            Hubungi kami untuk info lebih lanjut
+          </p>
+          <button
+            class="border-2 border-white max-lg:mt-4 px-4 py-3 font-medium rounded-full text-white hover:bg-white hover:text-black transisi"
+          >
+            <a href="https://wa.me/622345678" target="_blank">
+              Hubungi Kami
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="bg-black w-full pb-10">
+        <div class="mt-28 px-14">
+          <h2 class="text-white font-bold text-5xl leading-[1.1] capitalize">
+            Wonosobo
+          </h2>
+          <h3
+            class="text-white font-bold text-4xl leading-[1.1] capitalize mt-2"
+          >
+            the soul of java
+          </h3>
+          <hr class="border-b border-gray-700 w-full mt-10" />
+          <div class="flexBetween mt-6 max-lg:flex-col max-lg:items-start">
+            <div class="flex items-center gap-x-10 gap-y-5 flex-wrap">
+              <a href="/">
+                <h3 class="font-extrabold leading-none text-2xl text-white">
+                  Bukit<br />Scooter
+                </h3>
+              </a>
+              <hr class="border-l-2 border-gray-600 h-10" />
+              <h3 class="text-gray-300 leading-tight font-medium">
+                Jl. Masjid Nurul Huda No.31, Krajan, Dieng Kulon, <br />
+                Kec. Batur, Kab. Banjarnegara, Jawa Tengah 53456
+              </h3>
+            </div>
+            <div class="flexCenter gap-10 max-lg:mt-8">
+              <a href="/">
+                <i class="fa-brands fa-facebook-f text-white text-2xl"></i>
+              </a>
+              <a href="/">
+                <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+              </a>
+              <a href="/">
+                <i class="fa-brands fa-instagram text-white text-2xl"></i>
+              </a>
+              <a href="/">
+                <i class="fa-brands fa-x-twitter text-white text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu");
+        const menu = document.getElementById("mobile-menu");
+        const menuClose = document.getElementById("menu-close");
+
+        menuButton.addEventListener("click", function (event) {
+          event.stopPropagation(); // Mencegah event klik menyebar ke document
+          menu.classList.remove("right-[-100%]", "hidden");
+          menu.classList.add(
+            "right-0",
+            "ease-in-out",
+            "transition-all",
+            "duration-300"
+          );
+        });
+
+        menuClose.addEventListener("click", function (event) {
+          event.stopPropagation(); // Mencegah event klik menyebar ke menuButton
+          menu.classList.add("hidden");
+        });
+
+        document.addEventListener("click", function (event) {
+          // Cek apakah yang diklik adalah menu atau button menu
+          if (!menu.contains(event.target) && event.target !== menuButton) {
+            menu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

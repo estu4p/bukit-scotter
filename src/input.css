@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 410px) {
+  .text-5xl {
+    @apply text-4xl;
+  }
+}
+
+@layer utilities {
+  .container-padding {
+    @apply max-w-[1400px] mx-auto px-6 lg:px-12 min-[1680px]:px-0 w-full;
+  }
+
+  .max-container {
+    @apply max-w-[1400px] mx-auto;
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-12 min-[1680px]:px-0 w-full;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .transisi {
+    @apply transition-all ease-in;
+  }
+
+  .hover-black {
+    @apply hover:bg-black hover:text-white transition-all ease-in;
+  }
+}
